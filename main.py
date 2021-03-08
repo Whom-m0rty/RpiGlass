@@ -59,7 +59,7 @@ draw.rectangle((0,0,width,height), outline=0, fill=0)
 
 # Draw some shapes.
 # First define some constants to allow easy resizing of shapes.
-padding = -2
+padding = -10
 top = padding
 bottom = height-padding
 # Move left to right keeping track of the current x position for drawing shapes.
@@ -72,7 +72,7 @@ while True:
     draw.rectangle((0,0,width,height), outline=0, fill=0)
 
 
-    draw.text((x, top), f"{datetime.datetime.now()}",  font=font, fill=255)
+    draw.text((x, top), f"{datetime.datetime.now().}",  font=font, fill=255)
 
 
     disp.image(image)
