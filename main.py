@@ -28,6 +28,7 @@ from PIL import ImageDraw
 from PIL import ImageFont
 
 import datetime
+from statusbar import statusbar
 import subprocess
 
 
@@ -70,8 +71,8 @@ font = ImageFont.load_default()
 
 while True:
     draw.rectangle((0,0,width,height), outline=0, fill=0)
-
-    draw.text((x, top), f"{datetime.datetime.now()}",  font=font, fill=255)
+    statusbar.show_status_bar(draw)
+    # draw.text((x, top), f"{datetime.datetime.now()}",  font=font, fill=255)
 
     disp.image(image)
     disp.display()
